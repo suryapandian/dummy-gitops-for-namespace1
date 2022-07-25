@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: application1 
+  namespace: sub-team1
+  environment: prod
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    command: [sleep, Infinity]
+    imagePullPolicy: IfNotPresent
